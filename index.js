@@ -27,6 +27,7 @@ app.get('/webhook', (req, res) => {
 // 2. Nhận tin nhắn từ người dùng (Facebook gọi POST)
 app.post('/webhook', (req, res) => {
   const body = req.body;
+  console.log('Nhận dữ liệu từ Facebook:', JSON.stringify(body, null, 2));
 
   if (body.object === 'page') {
     body.entry.forEach(entry => {
