@@ -60,7 +60,7 @@ async function handleGetStarted(senderId) {
     'Sau khi gửi link, page sẽ hướng dẫn bạn cách áp dụng mã giảm giá tương ứng.';
 
   await sendMessage(senderId, welcomeText);
-  await sendImage(senderId, 'https://imgur.com/a/PZHnPbm');
+  await sendImage(senderId, 'https://www.image2url.com/r2/default/images/1783867974328-eeb3c30a-d62d-4c94-82d2-9d3b4d282340.png');
 }
 
 // Hàm gửi ảnh qua URL
