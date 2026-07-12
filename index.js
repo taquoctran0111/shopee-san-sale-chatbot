@@ -29,12 +29,12 @@ app.get('/webhook', (req, res) => {
 // 2. Nhận tin nhắn từ người dùng (Facebook gọi POST)
 app.post('/webhook', (req, res) => {
   const body = req.body;
-  console.log('Nhận dữ liệu từ Facebook:', JSON.stringify(body, null, 2));
 
   if (body.object === 'page') {
     body.entry.forEach(entry => {
       const webhookEvent = entry.messaging[0];
       const senderId = webhookEvent.sender.id;
+      console.log('Nhận tin nhắn từ user:', senderId, webhookEvent);
 
       // Trường hợp 1: user bấm nút Get Started lần đầu
       if (webhookEvent.postback && webhookEvent.postback.payload === 'GET_STARTED') {
